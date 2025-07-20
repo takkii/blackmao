@@ -20,7 +20,8 @@ class Source(Base):
         super().__init__(vim)
         self.name: Optional[str] = 'blackmao'
         self.filetypes = ['elixir']
-        mark_synbol: Optional[str] = '[python: ' + str(platform.python_version()) + ']'
+        mark_synbol: Optional[str] = '[python: ' + str(
+            platform.python_version()) + ']'
         self.mark = str(mark_synbol)
         ruby_match = [r'\.[a-zA-Z0-9_?!]*|[a-zA-Z]\w*::\w*']
         slash_no_match = [r'[;/[^¥/]\*/]']
@@ -57,10 +58,10 @@ class Source(Base):
 
                 # Get Receiver/diamond behavior.
                 with open(el_mod_fn) as rb_mt:
-                        dev_py: Optional[list] = list(rb_mt.readlines())
-                        dev_comp: Optional[list] = [s.rstrip() for s in dev_py]
-                        sorted(dev_comp, key=itemgetter(0))
-                        return dev_comp
+                    dev_py: Optional[list] = list(rb_mt.readlines())
+                    dev_comp: Optional[list] = [s.rstrip() for s in dev_py]
+                    sorted(dev_comp, key=itemgetter(0))
+                    return dev_comp
 
             # Python_VERSION: 3.5 or higher and 4.x or less.
             else:
