@@ -9,7 +9,7 @@ LICENSE)
 <br />
 
 <div align="center">
-  <h4><p>The Input Completion List Uses a Dictionary.</p></h4>
+  <h4><p>The Input Completion List Uses a Dictionary, origin totolot.</p></h4>
 </div>
 
 <br />
