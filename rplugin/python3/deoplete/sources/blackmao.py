@@ -50,8 +50,8 @@ class Source(Base):
                 vim_t: Optional[str] = '~/.vim/plugged/blackmao/dict/elixir.txt'
 
                 # Settings, $HOME/dict path is true/false folder search.
-                loc_f: Optional[str] = '~/GitHub/blackmao/dict/'
-                loc_t: Optional[str] = '~/GitHub/blackmao/dict/elixir.txt'
+                loc_f: Optional[str] = '~/GitHub/input/elixir/'
+                loc_t: Optional[str] = '~/GitHub/input/elixir/dict.txt'
 
                 # Use vim-plug | neovim, Set the dictionary.
                 if os.path.exists(os.path.expanduser(neo_f)):
