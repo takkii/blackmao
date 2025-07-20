@@ -41,51 +41,26 @@ class Source(Base):
             # 3.5 and higher, 4.x or less,python version is required.
             if (py_mj == 3 and py_mi > 4) or (py_mj < 4):
 
-                # Settings, vim-plug | neovim path is true/false folder search.
-                neo_f: Optional[str] = '~/.neovim/plugged/blackmao/dict/'
-                neo_t: Optional[str] = '~/.neovim/plugged/blackmao/dict/elixir.txt'
-
-                # Settings, vim-plug | vim path is true/false folder search.
-                vim_f: Optional[str] = '~/.vim/plugged/blackmao/dict/'
-                vim_t: Optional[str] = '~/.vim/plugged/blackmao/dict/elixir.txt'
-
                 # Settings, $HOME/dict path is true/false folder search.
-                loc_f: Optional[str] = '~/GitHub/input/elixir/'
-                loc_t: Optional[str] = '~/GitHub/input/elixir/dict.txt'
+                loc_t: Optional[str] = 'elixir/'
 
-                # Use vim-plug | neovim, Set the dictionary.
-                if os.path.exists(os.path.expanduser(neo_f)):
+                paths = [
+                    os.path.expanduser(os.path.join(p, loc_t)) for p in [
+                        '~/GitHub/input/', '~/.vim/plugged/input/',
+                        '~/.neovim/plugged/input/'
+                    ]
+                ]
 
-                    # User side, normal function.
-                    with open(os.path.expanduser(neo_t)) as r_meth:
-                        neo_py: Optional[list] = list(r_meth.readlines())
-                        neo_comp: Optional[list] = [s.rstrip() for s in neo_py]
-                        neo_comp.sort(key=itemgetter(0))
-                        return neo_comp
+                path = next(p for p in paths if os.path.exists(p))
+                el_dict: Optional[str] = 'dict.txt'
+                el_mod_fn = os.path.join(path, el_dict)
 
-                # Use vim-plug | vim, Set the dictionary.
-                elif os.path.exists(os.path.expanduser(vim_f)):
-
-                    # User side, normal function.
-                    with open(os.path.expanduser(vim_t)) as r_vim:
-                        vim_py: Optional[list] = list(r_vim.readlines())
-                        vim_comp: Optional[list] = [s.rstrip() for s in vim_py]
-                        vim_comp.sort(key=itemgetter(0))
-                        return vim_comp
-
-                # $HOME/dict, Set the dictionary to develop mode.
-                elif os.path.exists(os.path.expanduser(loc_f)):
-
-                    # Function change destination.
-                    with open(os.path.expanduser(loc_t)) as rb_mt:
+                # Get Receiver/diamond behavior.
+                with open(el_mod_fn) as rb_mt:
                         dev_py: Optional[list] = list(rb_mt.readlines())
                         dev_comp: Optional[list] = [s.rstrip() for s in dev_py]
                         sorted(dev_comp, key=itemgetter(0))
                         return dev_comp
-
-                # Config Folder not found.
-                else:
-                    raise ValueError("None, Please Check the dict Folder")
 
             # Python_VERSION: 3.5 or higher and 4.x or less.
             else:
