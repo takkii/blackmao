@@ -1,168 +1,107 @@
-Kernel
-Kernel.SpecialForms
-Data Types
-Atom
-Base
-Bitwise
-Date
-DateTime
-Duration
-Exception
-Float
-Function
-Integer
-JSON
-Module
-NaiveDateTime
-Record
-Regex
-String
-Time
-Tuple
-URI
-Version
-Version.Requirement
-Collections & Enumerables
+!{:!, _, [value]} do
+!value
+!value do
+(..) do
+@{:__aliases__, _meta, _args} do
+@{name, meta, args} do
+@expr
+^var, do: error!([var])
+__before_compile__(_env) do
+__before_compile__(env) do
+__CALLER__, do: error!([])
+__deriving__(module, struct, options) do
+__DIR__, do: error!([])
+__ENV__, do: error!([])
+__MODULE__, do: error!([])
+__STACKTRACE__, do: error!([])
+__using__(_) do
+__using__(_opts) do
+__using__(options) do
+__using__(opts) do
 Access
-Date.Range
-Enum
-Keyword
-List
-Map
-MapSet
-Range
-Stream
-IO & System
-File
-File.Stat
-File.Stream
-IO
-IO.ANSI
-IO.Stream
-OptionParser
-Path
-Port
-StringIO
-System
-Calendar
-Calendar
-Calendar.ISO
-Calendar.TimeZoneDatabase
-Calendar.UTCOnlyTimeZoneDatabase
-Processes & Applications
 Agent
+alias!({:__aliases__, meta, args}) do
+alias!(alias) when is_atom(alias) do
+alias(module, opts), do: error!([module, opts])
 Application
-Config
-Config.Provider
-Config.Reader
-DynamicSupervisor
-GenServer
-Node
-PartitionSupervisor
-Process
-Registry
-Supervisor
-Task
-Task.Supervisor
-Protocols
-Collectable
-Enumerable
-Inspect
-Inspect.Algebra
-Inspect.Opts
-JSON.Encoder
-List.Chars
-Protocol
-String.Chars
-Code & Macros
-Code
-Code.Fragment
-Kernel.ParallelCompiler
-Macro
-Macro.Env
-Deprecated
+ArgumentError
+ArithmeticError
+Atom
+BadArityError
+BadBooleanError
+BadFunctionError
+BadMapError
+BadStructError
+Base
 Behaviour
-Dict
-GenEvent
-HashDict
-HashSet
-Set
-Supervisor.Spec
-Exceptions
-ArgumentError
-ArithmeticError
-BadArityError
-BadBooleanError
-BadFunctionError
-BadMapError
-BadStructError
-CaseClauseError
-Code.LoadError
-CompileError
-CondClauseError
-Enum.EmptyError
-Enum.OutOfBoundsError
-ErlangError
-File.CopyError
-File.Error
-File.LinkError
-File.RenameError
-FunctionClauseError
-IO.StreamError
-Inspect.Error
-JSON.DecodeError
-Kernel.TypespecError
-KeyError
-MatchError
-MismatchedDelimiterError
-MissingApplicationsError
-OptionParser.ParseError
-Protocol.UndefinedError
-Regex.CompileError
-RuntimeError
-SyntaxError
-System.EnvError
-SystemLimitError
-TokenMissingError
-TryClauseError
-URI.Error
-UndefinedFunctionError
-UnicodeConversionError
-Version.InvalidRequirementError
-Version.InvalidVersionError
-WithClauseError
-Access
-Agent
-Application
-ArgumentError
-ArithmeticError
-Atom
-BadArityError
-BadBooleanError
-BadFunctionError
-BadMapError
-BadStructError
-Base
 Behaviour deprecated
+binding(context \\ nil) do
 Bitwise
 Calendar
 Calendar.ISO
 Calendar.TimeZoneDatabase
 Calendar.UTCOnlyTimeZoneDatabase
+case(condition, clauses), do: error!([condition, clauses])
 CaseClauseError
 Code
+Code & Macros
 Code.Fragment
 Code.LoadError
 Collectable
+Collections & Enumerables
+compile_env!(app, key_or_path) do
+compile_env(app, key_or_path, default \\ nil) do
 CompileError
+cond(clauses), do: error!([clauses])
 CondClauseError
 Config
 Config.Provider
 Config.Reader
+config_env() do
+config_target() do
+Data Types
 Date
 Date.Range
 DateTime
+dbg(code \\ quote(do: binding()), options \\ []) do
+dedup(callback, fun \\ nil) do
+def(_) do
+def({_, _, args}) when args == [] or is_atom(args) do
+def({name, _, args}) when is_atom(name) and is_list(args) do
+def(call, expr \\ nil) do
+def(signature)
+defadd do
+defcallback(spec) do
+defdelegate(funs, opts) do
+defexception(fields) do
+defguard(args, expr) do
+defguard(guard) do
+defguardp(guard) do
+defimpl(name, opts, do_block \\ []) do
+defkv(kv) do
+defmacro
+defmacro(call, expr \\ nil) do
+defmacrocallback(spec) do
+defmacrop(call, expr \\ nil) do
+defmodule(alias, do: block) do
+defmodule(alias, do_block)
+defmodule_with_length(name, do: block) do
+defoverridable(keywords_or_behaviour) do
+defp(call, expr \\ nil) do
+defprotocol(name, do: block) do
+defprotocol(name, do_block)
+defrecord(name, tag \\ nil, kv) do
+defrecordp(name, tag \\ nil, kv) do
+defsequence(name, code, terminator \\ "m") do
+defstruct(fields) do
+Deprecated
+derive(protocol, module, options \\ []) do
+destructure(left, right) when is_list(left) do
+Dict
 Dict deprecated
+drop(fun \\ nil) do
+drop_every(nth, fun \\ nil) do
+drop_while(callback, fun \\ nil) do
 Duration
 DynamicSupervisor
 Enum
@@ -171,6 +110,7 @@ Enum.OutOfBoundsError
 Enumerable
 ErlangError
 Exception
+Exceptions
 File
 File.CopyError
 File.Error
@@ -178,22 +118,42 @@ File.LinkError
 File.RenameError
 File.Stat
 File.Stream
+filter(callback, fun \\ nil) do
+filter_map(filter, mapper, fun \\ nil) do
+first..last do
+first..last//step do
 Float
+for(args), do: error!([args])
 Function
 FunctionClauseError
+GenEvent
 GenEvent deprecated
 GenServer
+get_and_update_in(path, fun) do
+HashDict
 HashDict deprecated
+HashSet
 HashSet deprecated
-IO
-IO.ANSI
-IO.Stream
-IO.StreamError
+if(condition, clauses) do
+import(module, opts), do: error!([module, opts])
+import_config(file) do
 Inspect
 Inspect.Algebra
 Inspect.Error
 Inspect.Opts
 Integer
+interference do
+IO
+IO & System
+IO.ANSI
+IO.Stream
+IO.StreamError
+is_exception(term) do
+is_exception(term, name) do
+is_nil(term) do
+is_struct(term) do
+is_struct(term, name) do
+is_var(expr) do
 JSON
 JSON.DecodeError
 JSON.Encoder
@@ -203,275 +163,165 @@ Kernel.SpecialForms
 Kernel.TypespecError
 KeyError
 Keyword
+left && right do
+left :: right, do: error!([left, right])
+left || right do
+left |> right do
+left <> right do
+left = right, do: error!([left, right])
+left and right do
+left in right do
+left or right do
+lib/elixir/lib/agent.ex
+lib/elixir/lib/application.ex
+lib/elixir/lib/behaviour.ex
+lib/elixir/lib/bitwise.ex
+lib/elixir/lib/config.ex
+lib/elixir/lib/dict.ex
+lib/elixir/lib/dynamic_supervisor.ex
+lib/elixir/lib/gen_event.ex
+lib/elixir/lib/gen_server.ex
+lib/elixir/lib/inspect.ex
+lib/elixir/lib/io/ansi.ex
+lib/elixir/lib/kernel/special_forms.ex
+lib/elixir/lib/kernel/utils.ex
+lib/elixir/lib/macro.ex
+lib/elixir/lib/module.ex
+lib/elixir/lib/module/types/helpers.ex
+lib/elixir/lib/protocol.ex
+lib/elixir/lib/record.ex
+lib/elixir/lib/stream/reducers.ex
+lib/elixir/lib/supervisor.ex
+lib/elixir/lib/task.ex
 List
 List.Chars
 Macro
 Macro.Env
+macro_inspect(value) do
 Map
+map(callback, fun \\ nil) do
+map_every(nth, mapper, fun \\ nil) do
 MapSet
+match?(pattern, expr) do
 MatchError
 MismatchedDelimiterError
 MissingApplicationsError
 Module
 NaiveDateTime
+no_interference do
 Node
 OptionParser
 OptionParser.ParseError
 PartitionSupervisor
 Path
+pop_in(path) do
 Port
 Process
+Processes & Applications
 Protocol
 Protocol.UndefinedError
+Protocols
+put_in(path, value) do
+quote(opts, block), do: error!([opts, block])
+raise(exception, attributes) do
+raise(message) do
 Range
+read do
+receive(args), do: error!([args])
 Record
 Regex
 Regex.CompileError
 Registry
+reject(callback, fun \\ nil) do
+require(module, opts), do: error!([module, opts])
+reraise(exception, attributes, stacktrace) do
+reraise(message, stacktrace) do
 RuntimeError
+scan2(callback, fun \\ nil) do
+scan3(callback, fun \\ nil) do
+Set
 Set deprecated
+sigil_C({:<<>>, _meta, [string]}, []) when is_binary(string) do
+sigil_c({:<<>>, _meta, pieces}, []) do
+sigil_C(term, modifiers)
+sigil_D({:<<>>, _, [string]}, []) do
+sigil_D(date_string, modifiers)
+sigil_N({:<<>>, _, [string]}, []) do
+sigil_N(naive_datetime_string, modifiers)
+sigil_r({:<<>>, _meta, [string]}, options) when is_binary(string) do
+sigil_r({:<<>>, meta, pieces}, options) do
+sigil_r(term, modifiers)
+sigil_S({:<<>>, _, [binary]}, []) when is_binary(binary), do: binary
+sigil_s({:<<>>, _, [piece]}, []) when is_binary(piece) do
+sigil_s({:<<>>, line, pieces}, []) do
+sigil_S(term, modifiers)
+sigil_T({:<<>>, _, [string]}, []) do
+sigil_T(time_string, modifiers)
+sigil_U({:<<>>, _, [string]}, []) do
+sigil_U(datetime_string, modifiers)
+sigil_w({:<<>>, _meta, [string]}, modifiers) when is_binary(string) do
+sigil_w({:<<>>, meta, pieces}, modifiers) do
+sigil_w(term, modifiers)
+sigil_x(term, [?r]) do
+sigil_x(term, _modifiers) do
+squared(x) do
 Stream
 String
 String.Chars
 StringIO
+super(args), do: error!([args])
 Supervisor
+Supervisor.Spec
 Supervisor.Spec deprecated
 SyntaxError
 System
 System.EnvError
 SystemLimitError
+take(fun \\ nil) do
+take_every(nth, fun \\ nil) do
+take_while(callback, fun \\ nil) do
+tap(value, fun) do
 Task
 Task.Supervisor
+then(value, fun) do
 Time
+to_char_list(arg) do
+to_charlist(term) do
+to_string(term) do
 TokenMissingError
+try(args), do: error!([args])
 TryClauseError
 Tuple
-URI
-URI.Error
 UndefinedFunctionError
 UnicodeConversionError
+uniq_by(callback, fun \\ nil) do
+unless(condition, clauses) do
+unless(expr, opts) do
+unquote(:%)(struct, map), do: error!([struct, map])
+unquote(:%{})(args), do: error!([args])
+unquote(:&)(expr), do: error!([expr])
+unquote(:.)(left, right), do: error!([left, right])
+unquote(:__aliases__)(args), do: error!([args])
+unquote(:__block__)(args), do: error!([args])
+unquote(:{})(args), do: error!([args])
+unquote(:<<>>)(args), do: error!([args])
+unquote(:fn)(clauses), do: error!([clauses])
+unquote(:unquote)(expr), do: error!([expr])
+unquote(:unquote_splicing)(expr), do: error!([expr])
+unquote(name)(args \\ []) do
+unquote(name)(record, args) do
+update_in(path, fun) do
+URI
+URI.Error
+use(module, opts \\ []) do
+var!({name, meta, atom}, context) when is_atom(name) and is_atom(atom) do
+var!(other, _context) do
+var!(var, context \\ nil)
 Version
 Version.InvalidRequirementError
 Version.InvalidVersionError
 Version.Requirement
+with(args), do: error!([args])
+with_index(fun \\ nil) do
 WithClauseError
-lib/elixir/lib/agent.ex
-defmacro __using__(opts) do
-lib/elixir/lib/application.ex
-defmacro __using__(_) do
-defmacro compile_env(app, key_or_path, default \\ nil) do
-defmacro compile_env!(app, key_or_path) do
-lib/elixir/lib/behaviour.ex
-defmacro defcallback(spec) do
-defmacro defmacrocallback(spec) do
-defmacro __using__(_) do
-lib/elixir/lib/bitwise.ex
-defmacro __using__(options) do
-lib/elixir/lib/config.ex
-defmacro config_env() do
-defmacro config_target() do
-defmacro import_config(file) do
-lib/elixir/lib/dict.ex
-defmacro __using__(_) do
-lib/elixir/lib/dynamic_supervisor.ex
-defmacro __using__(opts) do
-lib/elixir/lib/gen_event.ex
-defmacro __using__(_) do
-lib/elixir/lib/gen_server.ex
-defmacro __using__(opts) do
-defmacro __before_compile__(env) do
-lib/elixir/lib/inspect.ex
-defmacro __deriving__(module, struct, options) do
-lib/elixir/lib/io/ansi.ex
-defmacro defsequence(name, code, terminator \\ "m") do
-lib/elixir/lib/kernel/special_forms.ex
-defmacro unquote(:{})(args), do: error!([args])
-defmacro unquote(:%{})(args), do: error!([args])
-defmacro unquote(:%)(struct, map), do: error!([struct, map])
-defmacro unquote(:<<>>)(args), do: error!([args])
-defmacro unquote(:.)(left, right), do: error!([left, right])
-defmacro alias(module, opts), do: error!([module, opts])
-defmacro require(module, opts), do: error!([module, opts])
-defmacro import(module, opts), do: error!([module, opts])
-defmacro __ENV__, do: error!([])
-defmacro __MODULE__, do: error!([])
-defmacro __DIR__, do: error!([])
-defmacro __CALLER__, do: error!([])
-defmacro __STACKTRACE__, do: error!([])
-defmacro ^var, do: error!([var])
-defmacro left = right, do: error!([left, right])
-defmacro left :: right, do: error!([left, right])
-defmacro squared(x) do
-defmacro squared(x) do
-defmacro squared(x) do
-defmacro no_interference do
-defmacro interference do
-defmacro write do
-defmacro read do
-defmacro write do
-defmacro read do
-defmacro no_interference do
-defmacro no_interference do
-defmacro no_interference do
-defmacro interference do
-defmacro defadd do
-defmacro defkv(kv) do
-defmacro defkv(kv) do
-defmacro defkv(kv) do
-defmacro quote(opts, block), do: error!([opts, block])
-defmacro unquote(:unquote)(expr), do: error!([expr])
-defmacro unquote(:unquote_splicing)(expr), do: error!([expr])
-defmacro for(args), do: error!([args])
-defmacro with(args), do: error!([args])
-defmacro unquote(:fn)(clauses), do: error!([clauses])
-defmacro unquote(:__block__)(args), do: error!([args])
-defmacro unquote(:&)(expr), do: error!([expr])
-defmacro unquote(:__aliases__)(args), do: error!([args])
-defmacro super(args), do: error!([args])
-defmacro case(condition, clauses), do: error!([condition, clauses])
-defmacro cond(clauses), do: error!([clauses])
-defmacro try(args), do: error!([args])
-defmacro receive(args), do: error!([args])
-lib/elixir/lib/kernel/utils.ex
-defmacro defguard(args, expr) do
-defmacro tap(value, fun) do
-defmacro left or right do
-defmacro left and right do
-defmacro !value
-defmacro !{:!, _, [value]} do
-defmacro !value do
-defmacro left <> right do
-defmacro raise(message) do
-defmacro raise(exception, attributes) do
-defmacro reraise(message, stacktrace) do
-defmacro reraise(exception, attributes, stacktrace) do
-defmacro is_struct(term) do
-defmacro is_struct(term, name) do
-defmacro is_exception(term) do
-defmacro is_exception(term, name) do
-defmacro then(value, fun) do
-defmacro put_in(path, value) do
-defmacro pop_in(path) do
-defmacro update_in(path, fun) do
-defmacro get_and_update_in(path, fun) do
-defmacro to_string(term) do
-defmacro to_charlist(term) do
-defmacro is_nil(term) do
-defmacro match?(pattern, expr) do
-defmacro @expr
-defmacro @{:__aliases__, _meta, _args} do
-defmacro @{name, meta, args} do
-defmacro binding(context \\ nil) do
-defmacro if(condition, clauses) do
-defmacro unless(condition, clauses) do
-defmacro destructure(left, right) when is_list(left) do
-defmacro first..last do
-defmacro first..last//step do
-defmacro (..) do
-defmacro left && right do
-defmacro left || right do
-defmacro left |> right do
-defmacro left in right do
-defmacro var!(var, context \\ nil)
-defmacro var!({name, meta, atom}, context) when is_atom(name) and is_atom(atom) do
-defmacro var!(other, _context) do
-defmacro alias!(alias) when is_atom(alias) do
-defmacro alias!({:__aliases__, meta, args}) do
-defmacro defmodule(alias, do_block)
-defmacro defmodule(alias, do: block) do
-defmacro def(call, expr \\ nil) do
-defmacro defp(call, expr \\ nil) do
-defmacro unless(expr, opts) do
-defmacro defmacro(call, expr \\ nil) do
-defmacro defmacrop(call, expr \\ nil) do
-defmacro defstruct(fields) do
-defmacro defexception(fields) do
-defmacro defprotocol(name, do_block)
-defmacro defprotocol(name, do: block) do
-defmacro defimpl(name, opts, do_block \\ []) do
-defmacro __using__(_opts) do
-defmacro __using__(_opts) do
-defmacro defoverridable(keywords_or_behaviour) do
-defmacro defguard(guard) do
-defmacro defguardp(guard) do
-defmacro __using__(opts) do
-defmacro __using__(_opts) do
-defmacro __using__(_opts) do
-defmacro use(module, opts \\ []) do
-defmacro defdelegate(funs, opts) do
-defmacro dbg(code \\ quote(do: binding()), options \\ []) do
-defmacro sigil_S(term, modifiers)
-defmacro sigil_S({:<<>>, _, [binary]}, []) when is_binary(binary), do: binary
-defmacro sigil_s(term, modifiers)
-defmacro sigil_s({:<<>>, _, [piece]}, []) when is_binary(piece) do
-defmacro sigil_s({:<<>>, line, pieces}, []) do
-defmacro sigil_C(term, modifiers)
-defmacro sigil_C({:<<>>, _meta, [string]}, []) when is_binary(string) do
-defmacro sigil_c(term, modifiers)
-defmacro sigil_c({:<<>>, _meta, [string]}, []) when is_binary(string) do
-defmacro sigil_c({:<<>>, _meta, pieces}, []) do
-defmacro sigil_r(term, modifiers)
-defmacro sigil_r({:<<>>, _meta, [string]}, options) when is_binary(string) do
-defmacro sigil_r({:<<>>, meta, pieces}, options) do
-defmacro sigil_R(term, modifiers)
-defmacro sigil_R({:<<>>, _meta, [string]}, options) when is_binary(string) do
-defmacro sigil_D(date_string, modifiers)
-defmacro sigil_D({:<<>>, _, [string]}, []) do
-defmacro sigil_T(time_string, modifiers)
-defmacro sigil_T({:<<>>, _, [string]}, []) do
-defmacro sigil_N(naive_datetime_string, modifiers)
-defmacro sigil_N({:<<>>, _, [string]}, []) do
-defmacro sigil_U(datetime_string, modifiers)
-defmacro sigil_U({:<<>>, _, [string]}, []) do
-defmacro sigil_w(term, modifiers)
-defmacro sigil_w({:<<>>, _meta, [string]}, modifiers) when is_binary(string) do
-defmacro sigil_w({:<<>>, meta, pieces}, modifiers) do
-defmacro sigil_W(term, modifiers)
-defmacro sigil_W({:<<>>, _meta, [string]}, modifiers) when is_binary(string) do
-defmacro to_char_list(arg) do
-lib/elixir/lib/macro.ex
-defmacro macro_inspect(value) do
-defmacro sigil_x(term, [?r]) do
-defmacro sigil_x(term, _modifiers) do
-defmacro sigil_X(term, [?r]) do
-defmacro sigil_X(term, _modifiers) do
-defmacro left |> right do
-defmacro defmodule_with_length(name, do: block) do
-defmacro defmodule_with_length(name, do: block) do
-lib/elixir/lib/module/types/helpers.ex
-defmacro is_var(expr) do
-lib/elixir/lib/module.ex
-defmacro __before_compile__(_env) do
-lib/elixir/lib/protocol.ex
-defmacro def(signature)
-defmacro def({_, _, args}) when args == [] or is_atom(args) do
-defmacro def({name, _, args}) when is_atom(name) and is_list(args) do
-defmacro def(_) do
-defmacro __deriving__(module, struct, options) do
-defmacro derive(protocol, module, options \\ []) do
-lib/elixir/lib/record.ex
-defmacro defrecord(name, tag \\ nil, kv) do
-defmacro unquote(name)(args \\ []) do
-defmacro unquote(name)(record, args) do
-defmacro defrecordp(name, tag \\ nil, kv) do
-lib/elixir/lib/stream/reducers.ex
-defmacro dedup(callback, fun \\ nil) do
-defmacro drop(fun \\ nil) do
-defmacro drop_every(nth, fun \\ nil) do
-defmacro drop_while(callback, fun \\ nil) do
-defmacro filter(callback, fun \\ nil) do
-defmacro filter_map(filter, mapper, fun \\ nil) do
-defmacro map(callback, fun \\ nil) do
-defmacro map_every(nth, mapper, fun \\ nil) do
-defmacro reject(callback, fun \\ nil) do
-defmacro scan2(callback, fun \\ nil) do
-defmacro scan3(callback, fun \\ nil) do
-defmacro take(fun \\ nil) do
-defmacro take_every(nth, fun \\ nil) do
-defmacro take_while(callback, fun \\ nil) do
-defmacro uniq_by(callback, fun \\ nil) do
-defmacro with_index(fun \\ nil) do
-lib/elixir/lib/supervisor.ex
-defmacro __using__(opts) do
-lib/elixir/lib/task.ex
-defmacro __using__(opts) do
+write do
