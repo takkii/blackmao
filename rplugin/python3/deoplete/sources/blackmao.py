@@ -1,4 +1,5 @@
 import gc
+import numpy as np
 import os
 import platform
 import re
@@ -59,7 +60,8 @@ class Source(Base):
                 # Get Receiver/diamond behavior.
                 with open(el_mod_fn) as rb_mt:
                     dev_py: Optional[list] = list(rb_mt.readlines())
-                    dev_comp: Optional[list] = [s.rstrip() for s in dev_py]
+                    sort_ruby = np.array(dev_py).tolist()
+                    dev_comp: Optional[list] = [s.rstrip() for s in sort_ruby]
                     sorted(dev_comp, key=itemgetter(0))
                     return dev_comp
 
@@ -71,7 +73,7 @@ class Source(Base):
         except Exception:
             # Load/Create LogFile.
             blackmao: Optional[str] = os.path.expanduser('~/blackmao_log/')
-            db_w: Optional[str] = os.path.expanduser('~/blackmao/debug.log')
+            db_w: Optional[str] = os.path.expanduser('~/blackmao_log/debug.log')
 
             # Load the dictionary.
             if os.path.isdir(blackmao):
