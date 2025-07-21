@@ -23,11 +23,14 @@ class CleanRunner
       sel.grep(/\A#{Regexp.quote word}/)
     }
 
+    # check blackmao.py path
+    git_mao = File.basename(File.expand_path("~/GitHub/blackmao/rplugin/python3/deoplete/sources/blackmao.py"), ".py") + "_log"
+
     while (line = Readline.readline(""))
       line.chomp!
 
       if line.match?(sel[0])
-        FileUtils.rm_rf(File.expand_path('~/blackmao_log'))
+        FileUtils.rm_rf(File.expand_path('~/' + git_mao))
         puts ''
         puts 'Deleted, the existing blackmao_log folder.'
         puts ''
@@ -47,8 +50,11 @@ class CleanRunner
   end
 
   def self.run
+    # check blackmao.py path
+    git_mao = File.basename(File.expand_path("~/GitHub/blackmao/rplugin/python3/deoplete/sources/blackmao.py"), ".py") + "_log"
     encoding_style
-    if Dir.exist?(File.expand_path('~/blackmao_log'))
+
+    if Dir.exist?(File.expand_path('~/' + git_mao))
       puts ''
       puts 'Already have a blackmao_log folder.'
       delete
@@ -71,4 +77,3 @@ ensure
 end
 
 __END__
-
