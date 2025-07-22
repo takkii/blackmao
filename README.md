@@ -9,8 +9,8 @@ LICENSE)
 <br />
 
 <div align="center">
-  <h4><p>The Input Completion List Uses a Dictionary for elixir.</p></h4>
-  <p>real project clone, origin totolot.</p>
+  <p><h4>The Input Completion List Uses a Dictionary for elixir.</h4></p>
+  <p><b>real project clone, origin totolot.</b></p>
 </div>
 
 <br />
@@ -18,11 +18,14 @@ LICENSE)
 <div align="center">
   <img src="https://github.com/takkii/photo/blob/main/images/real.gif" alt="real images" title="logo">
 </div>
+<br />
+
+<div align="center">
+  <p> Module API documents for elixir <a href="https://hexdocs.pm/elixir/api-reference.html#modules">here</a>. </p>
+</div>
 
 <br />
 
 <div align="center">
-  <p> Elixir Lang, Dev documents categoly Enum <a href="https://hexdocs.pm/elixir/Enum.html">here</a>. </p>
+    <b> Copyright &copy 2025 Takayuki Kamiyama </b>
 </div>
-
-<br />
