@@ -71,9 +71,16 @@ class Source(Base):
 
         # TraceBack.
         except Exception:
+            # check blackmao.py path
+            git_mao = File.basename(
+                File.expand_path(
+                    "~/GitHub/blackmao/rplugin/python3/deoplete/sources/blackmao.py"
+                ), ".py") + "_log"
+
             # Load/Create LogFile.
-            blackmao: Optional[str] = os.path.expanduser('~/blackmao_log/')
-            db_w: Optional[str] = os.path.expanduser('~/blackmao_log/debug.log')
+            blackmao: Optional[str] = os.path.expanduser('~/' + git_mao)
+            db_w: Optional[str] = os.path.expanduser('~/' + git_mao +
+                                                     '/error.log')
 
             # Load the dictionary.
             if os.path.isdir(blackmao):
