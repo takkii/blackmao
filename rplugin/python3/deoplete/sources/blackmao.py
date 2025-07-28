@@ -71,9 +71,19 @@ class Source(Base):
 
         # TraceBack.
         except Exception:
+            # blackmao file path.
+            filepath = os.path.expanduser(
+                "~/.vim/plugged/blackmao/rplugin/python3/deoplete/sources/blackmao.py"
+            )
+
+            basename_without_ext = os.path.splitext(
+                os.path.basename(filepath))[0]
+            filename = (str(basename_without_ext) + "_log")
+
             # Load/Create LogFile.
-            blackmao: Optional[str] = os.path.expanduser('~/blackmao_log/')
-            db_w: Optional[str] = os.path.expanduser('~/blackmao_log/d.log')
+            blackmao: Optional[str] = str(filename)
+            db_w: Optional[str] = os.path.expanduser('~/' + filename +
+                                                     '/debug.log')
 
             # Load the dictionary.
             if os.path.isdir(blackmao):
