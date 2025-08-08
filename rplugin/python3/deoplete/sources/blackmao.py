@@ -48,8 +48,8 @@ class Source(Base):
 
                 paths = [
                     os.path.expanduser(os.path.join(p, loc_t)) for p in [
-                        '~/GitHub/input/', '~/.vim/plugged/input/',
-                        '~/.neovim/plugged/input/'
+                        '~/GitHub/dict/load', '~/.vim/plugged/dict/load/',
+                        '~/.neovim/plugged/dict/load/'
                     ]
                 ]
 
