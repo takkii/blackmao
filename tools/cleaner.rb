@@ -23,14 +23,17 @@ class CleanRunner
       sel.grep(/\A#{Regexp.quote word}/)
     }
 
-    # check blackmao.py path
-    git_mao = File.basename(File.expand_path("~/GitHub/blackmao/rplugin/python3/deoplete/sources/blackmao.py"), ".py") + "_log"
+    # Check, blackmao.py path
+    filepath = '~/.vim/plugged/blackmao/rplugin/python3/deoplete/sources/blackmao.py'.to_s
+    git_k = File.basename(File.expand_path(filepath), '.py')
+    black_exist = "#{git_k}_log"
+    encoding_style
 
     while (line = Readline.readline(""))
       line.chomp!
 
       if line.match?(sel[0])
-        FileUtils.rm_rf(File.expand_path('~/' + git_mao))
+        FileUtils.rm_rf(File.expand_path("~/#{black_exist}"))
         puts ''
         puts 'Deleted, the existing blackmao_log folder.'
         puts ''
@@ -50,11 +53,13 @@ class CleanRunner
   end
 
   def self.run
-    # check blackmao.py path
-    git_mao = File.basename(File.expand_path("~/GitHub/blackmao/rplugin/python3/deoplete/sources/blackmao.py"), ".py") + "_log"
+    # Check, blackmao.py path
+    filepath = '~/.vim/plugged/blackmao/rplugin/python3/deoplete/sources/blackmao.py'.to_s
+    git_k = File.basename(File.expand_path(filepath), '.py')
+    black_exist = "#{git_k}_log"
     encoding_style
 
-    if Dir.exist?(File.expand_path('~/' + git_mao))
+    if Dir.exist?(File.expand_path("~/#{black_exist}"))
       puts ''
       puts 'Already have a blackmao_log folder.'
       delete
@@ -63,7 +68,7 @@ class CleanRunner
       FileUtils.mv("#{File.dirname(__FILE__)}/blackmao_log", File.expand_path('~/'))
       puts ''
       puts 'Created, blackmao_log folder.'
-      puts ''  
+      puts ''
     end
   end
 end
