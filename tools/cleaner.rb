@@ -23,8 +23,8 @@ class CleanRunner
       sel.grep(/\A#{Regexp.quote word}/)
     }
 
-    # Check, blackmao.py path
-    filepath = '~/.vim/plugged/blackmao/rplugin/python3/deoplete/sources/blackmao.py'.to_s
+    # Check, heimao.py path
+    filepath = '~/.vim/plugged/heimao/rplugin/python3/deoplete/sources/heimao.py'.to_s
     git_k = File.basename(File.expand_path(filepath), '.py')
     black_exist = "#{git_k}_log"
     encoding_style
@@ -35,7 +35,7 @@ class CleanRunner
       if line.match?(sel[0])
         FileUtils.rm_rf(File.expand_path("~/#{black_exist}"))
         puts ''
-        puts 'Deleted, the existing blackmao_log folder.'
+        puts 'Deleted, the existing heimao_log folder.'
         puts ''
         break
       elsif line.match?(sel[1])
@@ -53,21 +53,21 @@ class CleanRunner
   end
 
   def self.run
-    # Check, blackmao.py path
-    filepath = '~/.vim/plugged/blackmao/rplugin/python3/deoplete/sources/blackmao.py'.to_s
+    # Check, heimao.py path
+    filepath = '~/.vim/plugged/heimao/rplugin/python3/deoplete/sources/heimao.py'.to_s
     git_k = File.basename(File.expand_path(filepath), '.py')
     black_exist = "#{git_k}_log"
     encoding_style
 
     if Dir.exist?(File.expand_path("~/#{black_exist}"))
       puts ''
-      puts 'Already have a blackmao_log folder.'
+      puts 'Already have a heimao_log folder.'
       delete
     else
-      FileUtils.mkdir('blackmao_log')
-      FileUtils.mv("#{File.dirname(__FILE__)}/blackmao_log", File.expand_path('~/'))
+      FileUtils.mkdir('heimao_log')
+      FileUtils.mv("#{File.dirname(__FILE__)}/heimao_log", File.expand_path('~/'))
       puts ''
-      puts 'Created, blackmao_log folder.'
+      puts 'Created, heimao_log folder.'
       puts ''
     end
   end
