@@ -3,7 +3,7 @@ License](http://img.shields.io/badge/license-MIT-blue.svg?style=flat)](
 LICENSE)
 
 <div align="center">
-  <h2><p>BlackMao is <a href="https://github.com/Shougo/deoplete.nvim">deoplete.nvim</a> plugins.</p></h2>
+  <h2><p>HeiMao is <a href="https://github.com/Shougo/deoplete.nvim">deoplete.nvim</a> plugins.</p></h2>
 </div>
 
 <br />
