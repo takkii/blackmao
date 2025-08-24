@@ -10,7 +10,7 @@ LICENSE)
 
 <div align="center">
   <p><h4>The Input Completion List Uses a Dictionary for elixir.</h4></p>
-  <p><b>real project clone, origin totolot.</b></p>
+  <p><b> Use dict project / real project clone, origin totolot.</b></p>
 </div>
 
 <br />
