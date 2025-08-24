@@ -1,0 +1,25 @@
+*heimao*
+
+version: 2025/08/24
+Author: takkii <karuma.reason@gmail.com>
+License: MIT
+
+==============================================================================
+*Environment*
+
+Environment construction                Python3, vim-plug, deoplete.nvim
+Introduction (vim-plug)
+
+Plug 'takkii/heimao'
+
+Settings (deoplete.nvim)                :UpdateRemotePlugins
+Dependency removal                      pip3 install -r requirements.txt
+Python3.5 ≦  x ＜ Python4.0             Python3.5 or higher
+x = heimao                              but less than 4.0 is recommended
+
+==============================================================================
+*./heimao*
+
+Log folder operations (create/delete)   ruby ./tools/cleaner.rb
+
+==============================================================================
