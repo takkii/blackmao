@@ -1,6 +1,6 @@
 *heimao*
 
-version: 2025/08/24
+version: 2025/08/25
 Author: takkii <karuma.reason@gmail.com>
 License: MIT
 
@@ -11,6 +11,7 @@ Environment construction                Python3, vim-plug, deoplete.nvim
 Introduction (vim-plug)
 
 Plug 'takkii/heimao'
+Plug 'takkii/dict'
 
 Settings (deoplete.nvim)                :UpdateRemotePlugins
 Dependency removal                      pip3 install -r requirements.txt
