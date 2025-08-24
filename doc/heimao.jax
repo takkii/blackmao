@@ -1,6 +1,6 @@
 *heimao*
 
-version: 2025/08/24
+version: 2025/08/25
 Author: takkii <karuma.reason@gmail.com>
 License: MIT
 
@@ -12,6 +12,7 @@ License: MIT
 導入(vim-plug)
 
 Plug 'takkii/heimao'
+Plug 'takkii/dict'
 
 設定(deoplete.nvim)                   :UpdateRemotePlugins
 依存解消                              pip3 install -r requirements.txt
