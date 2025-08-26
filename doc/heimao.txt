@@ -1,6 +1,6 @@
 *heimao*
 
-version: 2025/08/25
+version: 2025/08/26
 Author: takkii <karuma.reason@gmail.com>
 License: MIT
 
@@ -19,8 +19,8 @@ Python3.5 ≦  x ＜ Python4.0             Python3.5 or higher
 x = heimao                              but less than 4.0 is recommended
 
 ==============================================================================
-*./heimao*
+*./heimao/tools/*
 
-Log folder operations (create/delete)   ruby ./tools/cleaner.rb
+Log folder operations (create/delete)   ruby cleaner.rb
 
 ==============================================================================
